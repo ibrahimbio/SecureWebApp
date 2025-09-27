@@ -29,7 +29,7 @@ resource "azurerm_linux_web_app" "main" {
   location            = azurerm_resource_group.main.location
   service_plan_id     = azurerm_service_plan.main.id
   site_config {
-    dotnet_framework_version = "v8.0"
+    dotnet_framework_version = "v9.0"
   }
   https_only = true
 }
@@ -40,7 +40,7 @@ resource "azurerm_linux_web_app_slot" "staging" {
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
   site_config {
-    dotnet_framework_version = "v8.0"
+    dotnet_framework_version = "v9.0"
   }
   app_service_plan_id = azurerm_service_plan.main.id
   parent_app_name     = azurerm_linux_web_app.main.name

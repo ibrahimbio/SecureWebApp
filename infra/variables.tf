@@ -1,5 +1,31 @@
-variable "rg_name" { type = string }
-variable "location" { type = string }
-variable "webapp_name" { type = string }
-variable "kv_name" { type = string }
-variable "db_password" { type = string, sensitive = true }
+# infra/variables.tf
+variable "rg_name" {
+  description = "Name of the resource group"
+  type        = string
+  default     = "SecureRG"
+}
+
+variable "location" {
+  description = "Azure region"
+  type        = string
+  default     = "italynorth"
+}
+
+variable "webapp_name" {
+  description = "Name of the web app"
+  type        = string
+  default     = "securewebapp3300"
+}
+
+variable "kv_name" {
+  description = "Name of the Key Vault (must be globally unique)"
+  type        = string
+  default     = "securekv3300"
+}
+
+variable "db_password" {
+  description = "Database password"
+  type        = string
+  sensitive   = true
+  default     = "TempPassword123!"
+}

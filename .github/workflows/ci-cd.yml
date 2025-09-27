@@ -31,9 +31,13 @@ jobs:
 
       # Build & Test
       - name: Build
-        run: dotnet build --configuration Release
+        run: |
+          cd SecureWebApp
+          dotnet build --configuration Release
       - name: Test
-        run: dotnet test --configuration Release
+        run: |
+          cd SecureWebApp
+          dotnet test --configuration Release
 
       # CodeQL Analysis
       - name: Perform CodeQL Analysis
@@ -84,8 +88,9 @@ jobs:
       # Build & Publish .NET App
       - name: Publish App
         run: |
-          dotnet publish --configuration Release --output ./publish
-          cd publish && zip -r ../SecureWebApp.zip . && cd ..
+          cd SecureWebApp
+          dotnet publish --configuration Release --output ../publish
+          cd ../publish && zip -r ../SecureWebApp.zip . && cd ..
 
       # Deploy to Staging
       - name: Deploy to staging

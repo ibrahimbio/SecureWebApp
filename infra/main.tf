@@ -47,7 +47,7 @@ resource "azurerm_linux_web_app" "main" {
 
   site_config {
     application_stack {
-      dotnet_version = "9.0"
+      dotnet_version = "8.0"
     }
     always_on = true
   }
@@ -74,7 +74,7 @@ resource "azurerm_linux_web_app_slot" "staging" {
 
   site_config {
     application_stack {
-      dotnet_version = "9.0"
+      dotnet_version = "8.0"
     }
     always_on = true
   }

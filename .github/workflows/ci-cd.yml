@@ -140,3 +140,5 @@ jobs:
             -g ${{ secrets.AZURE_RG }} \
             -n ${{ secrets.AZURE_WEBAPP_NAME }} \
             --slot staging --target-slot production
+
+#see SecureWebApp/SecureWebApp/SecureWebApp.csproj

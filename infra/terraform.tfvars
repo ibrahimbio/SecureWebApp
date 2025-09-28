@@ -1,6 +1,5 @@
-
-rg_name      = "SecureRG"
-location     = "EastUS"
-webapp_name  = "securewebapp3390"
-kv_name      = "kv-securewebapp3390"
-db_password  = "SecurePassword123!"
+rg_name     = "SecureRG"
+location    = "italynorth"
+webapp_name = "securewebapp3380"
+kv_name     = "kv-securewebapp3380"
+db_password = "TempPassword123!"
